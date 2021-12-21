@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="410.0" prefWidth="767.0" style="-fx-background-color: red;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Allcontrollers.Loan">
+   <children>
+      <AnchorPane layoutX="-14.0" layoutY="64.0" prefHeight="346.0" prefWidth="626.0" style="-fx-background-color: orange;">
+         <children>
+            <VBox layoutX="14.0" layoutY="31.0" prefHeight="114.0" prefWidth="79.0">
+               <children>
+                  <Label prefHeight="39.0" prefWidth="71.0" text="Customer Id :" />
+                  <Label prefHeight="39.0" prefWidth="73.0" text="Branch Id :" />
+                  <Label prefHeight="35.0" prefWidth="79.0" text="Amount : " />
+               </children>
+            </VBox>
+            <VBox layoutX="93.0" layoutY="34.0" prefHeight="114.0" prefWidth="159.0">
+               <children>
+                  <TextField fx:id="loanentrycustomerid" prefHeight="25.0" prefWidth="107.0" />
+                  <TextField fx:id="loanentrybranchid" prefHeight="25.0" prefWidth="107.0">
+                     <VBox.margin>
+                        <Insets top="12.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="loanentryamount" prefHeight="25.0" prefWidth="107.0">
+                     <VBox.margin>
+                        <Insets top="12.0" />
+                     </VBox.margin>
+                  </TextField>
+               </children>
+            </VBox>
+            <TableView fx:id="loantable" layoutX="262.0" layoutY="34.0" onMouseClicked="#handlemouseclick" prefHeight="263.0" prefWidth="343.0">
+              <columns>
+                <TableColumn fx:id="loancustomerid" prefWidth="117.0" text="Customer Id" />
+                <TableColumn fx:id="loanbranchid" prefWidth="112.0" text="Branch Id" />
+                  <TableColumn fx:id="loanamount" prefWidth="128.0" text="Amount" />
+              </columns>
+            </TableView>
+            <Button fx:id="loaninsert" layoutX="28.0" layoutY="187.0" mnemonicParsing="false" onAction="#insertrecord" text="Insert" />
+            <Button fx:id="loandelete" layoutX="103.0" layoutY="187.0" mnemonicParsing="false" onAction="#deleterecord" text="Delete" />
+            <Button fx:id="loanupdate" layoutX="173.0" layoutY="187.0" mnemonicParsing="false" onAction="#updaterecord" text="Update" />
+         </children>
+      </AnchorPane>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="248.0" layoutY="22.0" prefHeight="17.0" prefWidth="245.0" text="LOAN DATABASE" textFill="WHITE" underline="true">
+         <font>
+            <Font name="System Italic" size="24.0" />
+         </font>
+      </Label>
+      <VBox layoutX="618.0" layoutY="64.0" prefHeight="338.0" prefWidth="147.0" style="-fx-background-color: cyan;">
+         <children>
+            <Button fx:id="customer_btn" mnemonicParsing="false" onAction="#customer_button" prefHeight="25.0" prefWidth="103.0" text="customer" underline="true">
+               <VBox.margin>
+                  <Insets left="33.0" top="27.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="branch_btn" mnemonicParsing="false" onAction="#branch_button" prefHeight="25.0" prefWidth="106.0" text="Branch" underline="true">
+               <VBox.margin>
+                  <Insets left="33.0" top="27.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="account_btn" mnemonicParsing="false" onAction="#account_button" prefHeight="25.0" prefWidth="108.0" text="account" underline="true">
+               <VBox.margin>
+                  <Insets left="33.0" top="27.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="transection_btn" mnemonicParsing="false" onAction="#transection_button" text="transaction_detail" underline="true">
+               <VBox.margin>
+                  <Insets left="33.0" top="27.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="exit" mnemonicParsing="false" onAction="#exit_btn" prefHeight="25.0" prefWidth="109.0" text="exit" underline="true">
+               <VBox.margin>
+                  <Insets left="34.0" top="27.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets left="3.0" />
+               </padding>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
