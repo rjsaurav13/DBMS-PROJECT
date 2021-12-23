@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="414.0" prefWidth="1083.0" style="-fx-background-color: #89ABE3FF;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Allcontrollers.Account">
+   <children>
+      <AnchorPane layoutY="76.0" prefHeight="324.0" prefWidth="919.0" style="-fx-background-color: WHITE;">
+         <children>
+            <VBox layoutX="8.0" layoutY="34.0" prefHeight="219.0" prefWidth="112.0">
+               <children>
+                  <Label text="Account_Number : ">
+                     <VBox.margin>
+                        <Insets top="12.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="Customer_id : ">
+                     <VBox.margin>
+                        <Insets top="19.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="Branch_id : ">
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="Opening Amount :  ">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="Opening Date : ">
+                     <VBox.margin>
+                        <Insets top="17.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="Account_type : ">
+                     <VBox.margin>
+                        <Insets top="18.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="Account_Status : ">
+                     <VBox.margin>
+                        <Insets top="21.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox layoutX="112.0" layoutY="31.0" prefHeight="245.0" prefWidth="165.0">
+               <children>
+                  <TextField prefHeight="23.0" prefWidth="169.0">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </TextField>
+               </children>
+            </VBox>
+            <TableView layoutX="284.0" layoutY="15.0" prefHeight="322.0" prefWidth="630.0">
+              <columns>
+                <TableColumn prefWidth="103.0" text="Account_Number" />
+                <TableColumn prefWidth="79.0" text="Customer_id" />
+                  <TableColumn prefWidth="65.0" text="Branch_id" />
+                  <TableColumn prefWidth="104.0" text="Opening Amount" />
+                  <TableColumn prefWidth="87.0" text="Opening Date" />
+                  <TableColumn prefWidth="86.4000244140625" text="Account_Type" />
+                  <TableColumn prefWidth="110.4000244140625" text="Account_Status" />
+              </columns>
+            </TableView>
+            <Button layoutX="41.0" layoutY="299.0" mnemonicParsing="false" text="Insert" />
+            <Button layoutX="112.0" layoutY="299.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="76.0" text="Update" />
+            <Button layoutX="215.0" layoutY="299.0" mnemonicParsing="false" text="Delete" />
+         </children>
+      </AnchorPane>
+      <VBox layoutX="919.0" layoutY="76.0" prefHeight="338.0" prefWidth="166.0" style="-fx-background-color: #89ABE3FF;">
+         <children>
+            <Button fx:id="customer_btn" mnemonicParsing="false" onAction="#customer_button" prefHeight="25.0" prefWidth="103.0" text="customer" underline="true">
+               <VBox.margin>
+                  <Insets left="23.0" top="25.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="branch_btn" mnemonicParsing="false" onAction="#branch_button" prefHeight="25.0" prefWidth="106.0" text="Branch" underline="true">
+               <VBox.margin>
+                  <Insets left="23.0" top="25.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="account_btn" mnemonicParsing="false" onAction="#account_button" prefHeight="25.0" prefWidth="108.0" text="account" underline="true">
+               <VBox.margin>
+                  <Insets left="23.0" top="25.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="transection_btn" mnemonicParsing="false" onAction="#transection_button" text="transection_detail" underline="true">
+               <VBox.margin>
+                  <Insets left="23.0" top="25.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="loan_btn" mnemonicParsing="false" onAction="#loan_button" prefHeight="25.0" prefWidth="109.0" text="loan" underline="true">
+               <VBox.margin>
+                  <Insets left="23.0" top="25.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="exit" mnemonicParsing="false" onAction="#exit_btn" prefHeight="25.0" prefWidth="109.0" text="exit" underline="true">
+               <VBox.margin>
+                  <Insets left="23.0" top="25.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets left="3.0" />
+               </padding>
+            </Button>
+         </children>
+      </VBox>
+      <Text layoutX="355.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BANK PORTAL" textAlignment="CENTER" underline="true" wrappingWidth="374.9666442871094">
+         <font>
+            <Font size="37.0" />
+         </font>
+         <fill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.7789473533630371" green="0.7789473533630371" blue="0.7789473533630371" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </fill>
+      </Text>
+      <ImageView fitHeight="49.0" fitWidth="94.0" layoutX="976.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Downloads/images.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
