@@ -13,7 +13,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("Allcontrollers/AllFxmls/loginpage.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("Allcontrollers/AllFxmls/account.fxml"));
         primaryStage.setTitle("Bank Database Management");
         primaryStage.setScene(new Scene(root, 600, 450));
         primaryStage.show();

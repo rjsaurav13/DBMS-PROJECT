@@ -6,15 +6,21 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="414.0" prefWidth="1083.0" style="-fx-background-color: red;" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Allcontrollers.Account">
+<AnchorPane prefHeight="414.0" prefWidth="1083.0" style="-fx-background-color: #89ABE3FF;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Allcontrollers.Account">
    <children>
-      <AnchorPane layoutY="76.0" prefHeight="324.0" prefWidth="919.0" style="-fx-background-color: orange;">
+      <AnchorPane layoutY="76.0" prefHeight="382.0" prefWidth="923.0" style="-fx-background-color: white;">
          <children>
-            <VBox prefHeight="219.0" prefWidth="112.0">
+            <VBox layoutY="23.0" prefHeight="219.0" prefWidth="112.0">
                <children>
                   <Label text="Account_Number : ">
                      <VBox.margin>
@@ -53,7 +59,7 @@
                   </Label>
                </children>
             </VBox>
-            <VBox layoutX="100.0" prefHeight="245.0" prefWidth="165.0">
+            <VBox layoutX="99.0" layoutY="23.0" prefHeight="245.0" prefWidth="165.0">
                <children>
                   <TextField fx:id="entryaccno" prefHeight="23.0" prefWidth="169.0" promptText="enter account no.">
                      <VBox.margin>
@@ -92,7 +98,7 @@
                   </TextField>
                </children>
             </VBox>
-            <TableView fx:id="accounttable" layoutX="284.0" layoutY="15.0" prefHeight="271.0" prefWidth="618.0">
+            <TableView fx:id="accounttable" layoutX="284.0" layoutY="15.0" prefHeight="358.0" prefWidth="629.0">
               <columns>
                 <TableColumn fx:id="accnocolumn" prefWidth="103.0" text="Account_Number" />
                 <TableColumn fx:id="customercolumn" prefWidth="79.0" text="Customer_id" />
@@ -103,17 +109,12 @@
                   <TableColumn fx:id="accountstatuscolumn" prefWidth="94.0" text="Account_Status" />
               </columns>
             </TableView>
-            <Button fx:id="insertbutton" layoutX="30.0" layoutY="260.0" mnemonicParsing="false" onAction="#insetbtn" text="Insert" />
-            <Button fx:id="updatebutton" layoutX="112.0" layoutY="260.0" mnemonicParsing="false" onAction="#updatebtn" prefHeight="25.0" prefWidth="76.0" text="Update" />
-            <Button fx:id="deletebutton" layoutX="213.0" layoutY="260.0" mnemonicParsing="false" onAction="#deletebtn" text="Delete" />
+            <Button fx:id="insertbutton" layoutX="33.0" layoutY="303.0" mnemonicParsing="false" onAction="#insetbtn" text="Insert" />
+            <Button fx:id="updatebutton" layoutX="112.0" layoutY="303.0" mnemonicParsing="false" onAction="#updatebtn" prefHeight="25.0" prefWidth="76.0" text="Update" />
+            <Button fx:id="deletebutton" layoutX="215.0" layoutY="303.0" mnemonicParsing="false" onAction="#deletebtn" text="Delete" />
          </children>
       </AnchorPane>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="342.0" layoutY="21.0" prefHeight="17.0" prefWidth="218.0" text="Account Database" textFill="WHITE" underline="true">
-         <font>
-            <Font name="System Bold Italic" size="24.0" />
-         </font>
-      </Label>
-      <VBox layoutX="922.0" prefHeight="418.0" prefWidth="165.0" style="-fx-background-color: cyan;">
+      <VBox layoutX="922.0" layoutY="68.0" prefHeight="395.0" prefWidth="166.0" style="-fx-background-color: #89ABE3FF;">
          <children>
             <Button fx:id="customer_btn" mnemonicParsing="false" onAction="#customer_button" prefHeight="25.0" prefWidth="103.0" text="customer" underline="true">
                <VBox.margin>
@@ -145,5 +146,31 @@
             </Button>
          </children>
       </VBox>
+      <ImageView fitHeight="49.0" fitWidth="94.0" layoutX="978.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Downloads/images.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="357.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BANK PORTAL" textAlignment="CENTER" underline="true" wrappingWidth="374.9666442871094">
+         <font>
+            <Font size="37.0" />
+         </font>
+         <fill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.7789473533630371" green="0.7789473533630371" blue="0.7789473533630371" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </fill>
+      </Text>
    </children>
 </AnchorPane>

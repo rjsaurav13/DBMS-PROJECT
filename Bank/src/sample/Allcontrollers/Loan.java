@@ -9,10 +9,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
@@ -210,15 +207,24 @@ public class Loan implements Initializable {
     private void executeQuery(String sql) {
         Connection c=getConnection();
         Statement st = null;
+
         try{
             st=c.createStatement();
             st.executeUpdate(sql);
+//            if(check==0) {
+//              //if(str=="update")  printing("Value Not Found","Can't Update",str); //because of foreign key not work
+////              else
+//              if(str=="delete") printing("Value Not Found","Can't Delete",str) ;
+//            }
         }
         catch(Exception e){
+            printing(e.getMessage(),"Cant't Insert ","Insert");
             System.out.println("Error occur in insert statement in loan");
         }
+
     }
 
+    //foreign key not connected it will not work
     private void updatingrecord(){
         String sql="update loan set branch_id="+ loanentrybranchid.getText() +",amount="+loanentryamount.getText()+
                    " where customer_id="+ loanentrycustomerid.getText();
@@ -231,6 +237,15 @@ public class Loan implements Initializable {
         String sql="delete from loan where customer_id="+loanentrycustomerid.getText()+" and branch_id="+
                    loanentrybranchid.getText()+" and amount="+loanentryamount.getText();
         executeQuery(sql);
+
         showloanrecord();
+    }
+
+    public static void printing(String infoMessage, String headerText, String title){
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setContentText(infoMessage);
+        alert.setTitle(title);
+        alert.setHeaderText(headerText);
+        alert.showAndWait();
     }
 }

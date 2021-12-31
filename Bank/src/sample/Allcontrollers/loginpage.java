@@ -90,7 +90,7 @@ public class loginpage implements Initializable {
     }
 
     public static void printing(String infoMessage, String headerText, String title){
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setContentText(infoMessage);
         alert.setTitle(title);
         alert.setHeaderText(headerText);
@@ -101,4 +101,5 @@ public class loginpage implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
     }
+
 }

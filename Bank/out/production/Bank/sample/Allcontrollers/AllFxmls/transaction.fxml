@@ -102,31 +102,31 @@
             <Font name="System Italic" size="24.0" />
          </font>
       </Label>
-      <VBox layoutX="865.0" layoutY="78.0" prefHeight="404.0" prefWidth="147.0" style="-fx-background-color: cyan;">
+      <VBox layoutX="865.0" layoutY="1.0" prefHeight="481.0" prefWidth="147.0" style="-fx-background-color: cyan;">
          <children>
             <Button fx:id="customer_btn" mnemonicParsing="false" onAction="#customer_button" prefHeight="25.0" prefWidth="103.0" text="customer" underline="true">
                <VBox.margin>
-                  <Insets left="24.0" top="34.0" />
+                  <Insets left="24.0" top="64.0" />
                </VBox.margin>
             </Button>
             <Button fx:id="branch_btn" mnemonicParsing="false" onAction="#branch_button" prefHeight="25.0" prefWidth="106.0" text="Branch" underline="true">
                <VBox.margin>
-                  <Insets left="24.0" top="34.0" />
+                  <Insets left="24.0" top="64.0" />
                </VBox.margin>
             </Button>
             <Button fx:id="account_btn" mnemonicParsing="false" onAction="#account_button" prefHeight="25.0" prefWidth="108.0" text="account" underline="true">
                <VBox.margin>
-                  <Insets left="24.0" top="34.0" />
+                  <Insets left="24.0" top="64.0" />
                </VBox.margin>
             </Button>
             <Button fx:id="loan_btn" mnemonicParsing="false" onAction="#loan_button" prefHeight="25.0" prefWidth="109.0" text="loan" underline="true">
                <VBox.margin>
-                  <Insets left="24.0" top="34.0" />
+                  <Insets left="24.0" top="64.0" />
                </VBox.margin>
             </Button>
             <Button fx:id="exit" mnemonicParsing="false" onAction="#exit_btn" prefHeight="25.0" prefWidth="109.0" text="exit" underline="true">
                <VBox.margin>
-                  <Insets left="24.0" top="34.0" />
+                  <Insets left="24.0" top="64.0" />
                </VBox.margin>
                <padding>
                   <Insets left="3.0" />

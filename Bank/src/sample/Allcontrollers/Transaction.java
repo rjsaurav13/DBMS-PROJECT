@@ -125,25 +125,22 @@ public class Transaction implements Initializable {
         }
     }
 
-    private void deleterecord() {
+    private void deleterecord() throws SQLException {
         Connection c= getConnection();
 //        "delete from table name where name=__";
-        String sql="delete from transaction_detail where transaction_number=? and account_number=? and date_of_transaction=? and  mode=?  and type=? and  amount=?";
-        try(PreparedStatement stmt=c.prepareStatement(sql)){
-            Date date =new Date(0);
-            stmt.setInt(1, Integer.parseInt(tranoentry.getText()));
-            stmt.setInt(2, Integer.parseInt(accentry.getText()));
-            stmt.setDate(3,date.valueOf(datentey.getText()));
-            stmt.setString(4,modentry.getText());
-            stmt.setString(5,typeentry.getText());
-            stmt.setInt(6, Integer.parseInt(amountentry.getText()));
-            stmt.execute();
-            showtranactionrecord();
-        }
-        catch(Exception  e){
-            printing(e.getMessage(),null,"Error");
-
-        }
+        String sql="delete from bank_144.transaction_detail where transaction_number=? and account_number=? and date_of_transaction=? and  mode=?  and type=? and  amount=?";
+        PreparedStatement stmt = c.prepareStatement(sql);
+        stmt.setInt(1, Integer.parseInt(tranoentry.getText()));
+        stmt.setInt(2, Integer.parseInt(accentry.getText()));
+        stmt.setDate(3, Date.valueOf(datentey.getText()));
+        stmt.setString(4,modentry.getText());
+        stmt.setString(5,typeentry.getText());
+        stmt.setInt(6, Integer.parseInt(amountentry.getText()));
+        int i=stmt.executeUpdate();
+        if(i>0)
+         showtranactionrecord();
+        else
+            printing("Record not Found","Not Delete","Delete");
     }
 
     @FXML
@@ -153,26 +150,31 @@ public class Transaction implements Initializable {
 
     @FXML
     //insert button in transaction database
-    void insertbtn(ActionEvent event) throws SQLException {
+    void insertbtn(ActionEvent event) {
             if(event.getSource()==insertbutton){
                 insertrecord();
             }
     }
 
     // best way is use prepared statement faster in execution insert record in database
-    private void insertrecord() throws SQLException {
+    private void insertrecord()  {
         Connection c=getConnection();
-        Date date=new Date(0);
         String sql= "insert into transaction_detail values  (?, ?, ?, ?, ?, ?)";
-        PreparedStatement pstmt = c.prepareStatement(sql);
-        pstmt.setInt(1, Integer.parseInt(tranoentry.getText()));
-        pstmt.setInt(2, Integer.parseInt(accentry.getText()));
-        pstmt.setDate(3,date.valueOf(datentey.getText()));
-        pstmt.setString(4,modentry.getText());
-        pstmt.setString(5,typeentry.getText());
-        pstmt.setInt(6, Integer.parseInt(amountentry.getText()));
-        pstmt.execute();
-        showtranactionrecord();
+        PreparedStatement pstmt = null;
+        try {
+            pstmt = c.prepareStatement(sql);
+            pstmt.setInt(1, Integer.parseInt(tranoentry.getText()));
+            pstmt.setInt(2, Integer.parseInt(accentry.getText()));
+            pstmt.setDate(3, Date.valueOf(datentey.getText()));
+            pstmt.setString(4,modentry.getText());
+            pstmt.setString(5,typeentry.getText());
+            pstmt.setInt(6, Integer.parseInt(amountentry.getText()));
+            pstmt.execute();
+            showtranactionrecord();
+        } catch (SQLException throwables) {
+            printing(throwables.getMessage(),"Error in insert","Error");
+        }
+
     }
 
 
@@ -196,7 +198,6 @@ public class Transaction implements Initializable {
 
     private void update() throws SQLException {
         Connection c= getConnection();
-        Date date= new Date(0);
         String sql="Update transaction_detail set account_number=? , " +
                 "date_of_transaction=?,mode=?" +
                 ",type=?,amount=? " +
@@ -204,13 +205,20 @@ public class Transaction implements Initializable {
 
         PreparedStatement stmt=c.prepareStatement(sql);
         stmt.setInt(1, Integer.parseInt(accentry.getText()));
-        stmt.setDate(2,date.valueOf(datentey.getText()));
+        stmt.setDate(2, Date.valueOf(datentey.getText()));
         stmt.setString(3,modentry.getText());
         stmt.setString(4,typeentry.getText());
         stmt.setInt(5, Integer.parseInt(amountentry.getText()));
         stmt.setInt(6, Integer.parseInt(tranoentry.getText()));
-        stmt.execute();
-        showtranactionrecord();
+        int check =stmt.executeUpdate();
+        System.out.println(check);
+        if(check>0){
+            showtranactionrecord();
+        }
+        else{
+            printing("Not Updated ","update","Error");
+        }
+
     }
 
 
@@ -277,7 +285,7 @@ public class Transaction implements Initializable {
     }
     //printing msg in database
     public static void printing(String infoMessage, String headerText, String title){
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setContentText(infoMessage);
         alert.setTitle(title);
         alert.setHeaderText(headerText);

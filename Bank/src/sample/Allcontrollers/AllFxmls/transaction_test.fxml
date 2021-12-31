@@ -6,13 +6,15 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="481.0" prefWidth="1017.0" style="-fx-background-color: red;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Allcontrollers.Transaction">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="514.0" prefWidth="1028.0" style="-fx-background-color: #89ABE3FF;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Allcontrollers.Transaction">
    <children>
-      <AnchorPane layoutY="78.0" prefHeight="404.0" prefWidth="822.0" style="-fx-background-color: orange;">
+      <AnchorPane layoutY="78.0" prefHeight="440.0" prefWidth="878.0" style="-fx-background-color: white;">
          <children>
             <VBox prefHeight="200.0" prefWidth="119.0">
                <children>
@@ -102,7 +104,7 @@
             <Font name="System Italic" size="24.0" />
          </font>
       </Label>
-      <VBox layoutX="865.0" layoutY="1.0" prefHeight="481.0" prefWidth="147.0" style="-fx-background-color: cyan;">
+      <VBox layoutX="863.0" layoutY="49.0" prefHeight="430.0" prefWidth="139.0" style="-fx-background-color: #89ABE3FFan;">
          <children>
             <Button fx:id="customer_btn" mnemonicParsing="false" onAction="#customer_button" prefHeight="25.0" prefWidth="103.0" text="customer" underline="true">
                <VBox.margin>
@@ -134,5 +136,10 @@
             </Button>
          </children>
       </VBox>
+      <ImageView fitHeight="49.0" fitWidth="94.0" layoutX="901.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Downloads/images.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
