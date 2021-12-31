@@ -1,4 +1,4 @@
-# Online Library Management System
+# BANK PORTAL SYSTEM
 #### An interactive Bank portal for automating various manual processes done by Customer/admin.
 
 
