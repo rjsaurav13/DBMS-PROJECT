@@ -104,7 +104,10 @@ The source code of this project is written in **Javafx**. So, you'll require **J
 
 ```
 
-Invite me to connect on [LinkedIn](https://www.linkedin.com/in/sauravkumar1203/).
+Invite me to connect on 
+
+<a href="https://www.linkedin.com/in/sauravkumar1203/"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-Saurav%20Kumar-blue?style=flat-square&logo=linkedin"></a>
+
 
 [![Instagram](https://img.shields.io/static/v1.svg?label=follow&message=@saurav.k_&color=grey&logo=instagram&style=flat&logoColor=white&colorA=critical)](https://www.instagram.com/saurav.k_/)
 
