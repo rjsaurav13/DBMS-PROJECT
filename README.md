@@ -12,6 +12,8 @@
 Manual process of keeping customer records, account records, account details, managing it all is very difficult. There are various problems also faced by the admin in finding any particular record, information whether account is available or not, searching of customer using account number etc. To eliminate this manual system, **BANK PORTAL SYSTEM** has been developed.
 [![report](https://img.shields.io/static/v1.svg?label=Project&message=Report&logo=microsoft-word&style=social)](https://drive.google.com/file/d/1SeEjAXkmaVHvtA-abEhGMu4zr8DEibeV/view)
 
+
+
 > **You can download the report [here](https://drive.google.com/file/d/1SeEjAXkmaVHvtA-abEhGMu4zr8DEibeV/view).**
 
 > **You can check the screenshots of User Interface [here](https://drive.google.com/drive/folders/1bN7TRpWV_3FZS2D6sz0_8tBVG8MQZSt0?usp=sharing).**
@@ -62,7 +64,7 @@ Manual process of keeping customer records, account records, account details, ma
 
 ## Technology Stack Used
 
-![javafx](https://img.shields.io/badge/javafx-orange.svg?logo=html5&style=flat-square) 
+![javafx](https://img.shields.io/badge/javafx-orange.svg?logo=java&style=flat-square) 
 ![MYSQL](https://img.shields.io/badge/database-mysql-lightgray.svg?logo=mysql&logoColor=white&style=flat-square) 
 
 - Front End - **Javafx**
@@ -70,8 +72,6 @@ Manual process of keeping customer records, account records, account details, ma
 - Database - **MySql**
 
 ## Requirements
-
-[![JDBC](https://img.shields.io/static/v1.svg?label=Source%20Code&message=php&logo=JDBC&style=social)]
 
 The source code of this project is written in **Javafx**. So, you'll require **JAVAFX/JDBC/MYSQL** to run this project.
 
@@ -92,7 +92,7 @@ The source code of this project is written in **Javafx**. So, you'll require **J
 5. Connect local database.
 6. Import the [database] from **database** folder. 
 
-## Need help?
+
 
 ```javascript
 
@@ -105,12 +105,9 @@ The source code of this project is written in **Javafx**. So, you'll require **J
 ```
 
 Invite me to connect on [LinkedIn](https://www.linkedin.com/in/sauravkumar1203/).
+
 [![Instagram](https://img.shields.io/static/v1.svg?label=follow&message=@saurav.k_&color=grey&logo=instagram&style=flat&logoColor=white&colorA=critical)](https://www.instagram.com/saurav.k_/)
 
-
-
-[![saythanks](https://img.shields.io/badge/say-thanks-ff69b4.svg)](https://facebook.com/vinit.shahdeo) 
-[![Twitter](https://img.shields.io/twitter/url/https/github.com/vinitshahdeo/Library-Management-System.svg?style=social)](https://twitter.com/intent/tweet?text=Library%20Management%20System%20by@Vinit_Shahdeo%20:&url=https://github.com/vinitshahdeo/Library-Management-System)
 
 Thank you for being here!
 
