@@ -5,7 +5,7 @@
 
 ## Abstract
 
-![BANK PORTAL SYSTEM](https://img.shields.io/badge/library--management-system-orange.svg?style=flat-square) 
+![BANK PORTAL SYSTEM](https://img.shields.io/badge/Chat-App-orange.svg?style=flat-square) 
 ![DBMS Project](https://img.shields.io/badge/DBMS-project-yellowgreen.svg?style=flat-square)
 ![Open Source Programming](https://img.shields.io/badge/open--source-programming-ff69b4.svg?style=flat-square)
 
